@@ -114,7 +114,7 @@ public class MysqlServer {
                     // Set catalog here.
                     context.setEnv(Env.getCurrentEnv());
                     if (!scheduler.submit(context)) {
-                        LOG.warn("Submit one connect request failed. Client=" + clientChannel.toString());
+                        LOG.warn("Submit one connect request failed. Client=" + clientChannel);
                         // clear up context
                         context.cleanup();
                     }
